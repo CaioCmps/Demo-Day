@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Demo Ciclo 2</title>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <header class="header">
+        <span class="headerTittle">
+           <b> Controle de Acúmulo - Cargo Facultativo</b>
+        </span>
+    </header>
+    <div class="sidenav">
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a style="color: #f1f1f1 ;">Navio: EverGreen</a>
+        <a style="color: #f1f1f1 ;">Valor Segurado: $25.67 mi(72.9%)</a>
+        <a style="color: #f1f1f1 ;">Boeing $9.39 mi (36.6%)</a>
+        <a style="color: #f1f1f1 ;">BRF 8.39 mi (5.6%)</a>
+        <a style="color: #f1f1f1 ;">CBMM $2.46 mi (9.6%)</a>
+        <a style="color: #f1f1f1 ;">Nissan $5.43 mi (21.16%)</a>
+        <a style="color: #f1f1f1 ;">Carga Não-Segurada (27.1%) </a>
+        <script>
+            
+        </script>
+      </div>
+      <div class="aside">
+    <section class="section">
+
+        <figure>
+            <img id="dog1" src="printnavioLATERAL1colorido.png" draggable="true" ondragstart="drag(event)" style="visibility: hidden" position="absolute" width="1098" height="606" usemap="#cargueiro2">
+            <img id="dog2" src="printnavioLATERAL1azul.png" style="visibility: hidden" position="absolute" width="1098" height="606" usemap="#cargueiro1">
+            <img id="dog3" src="printnavioLATERAL1verde.png" draggable="true" ondragstart="drag(event)" style="visibility: hidden" position="absolute" width="1098" height="606">
+            <img id="dog4" src="printnavioLATERAL1ROSA.png" draggable="true" ondragstart="drag(event)" style="visibility: hidden" position="absolute" width="1098" height="606">  
+            <img id="dog5" src="printnavioFRENTE1setor1colorido.png" draggable="true" ondragstart="drag(event)" style="visibility: hidden" position="absolute" width="1098" height="606">
+            <img id="dog6" src="printnavioFRENTE5setor1azul.png" draggable="true" ondragstart="drag(event)" style="visibility: hidden" position="absolute" width="1098" height="606">
+            <img id="dog7" src="printnavioFRENTE2setor1verde.png" draggable="true" ondragstart="drag(event)" style="visibility: hidden" position="absolute" width="1098" height="606">
+            <img id="dog8" src="printnavioFRENTE4setor1rosa.png" draggable="true" ondragstart="drag(event)" style="visibility: hidden" position="absolute" width="1098" height="606">
+        </figure>
+
+        <map name="cargueiro1">
+            <area shape="rect" coords="350,200,450,250" href="" alt="" target="alvo">
+        </map>
+        <map name="cargueiro2">
+            <area shape="rect" coords="495,220,580,266" href="gráfico.png" alt="" target="alvo" >
+        </map>
+    </section>
+    <section class="section">
+        <iframe src="" frameborder="0" name = "alvo"></iframe>
+    </section>
+   <div id="centralizar"> 
+    <button id="btn1" onclick="myFunction()" >Visão Geral </button>
+    <button onclick="myFunction2()">Boeing </button>
+    <button onclick="myFunction3()">CBMM </button>
+    <button onclick="myFunction4()">BRF </button>
+    <button onclick="myFunction5()">Visão Frontal </button>
+    <button onclick="myFunction6()">Boeing</button>
+    <button onclick="myFunction7()">CBMM </button>
+    <button onclick="myFunction8()">BRF </button>
+    </div>
+    <script>
+        function fadeIn(el){
+            el.style.opacity= 0;
+            var tick = function () {
+                el.style.opacity = +el.style.opacity + 0.01;
+                if (+el.style.opacity < 1) {
+                    (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
+                }
+            };
+            tick();
+        }
+        window.myFunction = function () {
+            var el  = document.getElementById("dog1");
+            var el2 = document.getElementById("dog2");
+            var el3 = document.getElementById("dog3");
+            var el4 = document.getElementById("dog4");
+            var el5 = document.getElementById("dog5");
+            var el6 = document.getElementById("dog6");
+            var el7 = document.getElementById("dog7");
+            var el8 = document.getElementById("dog8");
+
+            el2.style="display:none;";
+            el.style="display:block;";
+            el3.style="display:none;";
+            el4.style="display:none;";
+            el5.style="display:none;";
+            el6.style="display:none;";
+            el7.style="display:none;";
+            el8.style="display:none;";
+            //fadeIn(el);
+
+        window.myFunction2 = function () {
+            var el  = document.getElementById("dog2");
+            var el2 = document.getElementById("dog1");
+            var el3 = document.getElementById("dog3");
+            var el4 = document.getElementById("dog4");
+            var el5 = document.getElementById("dog5");
+            var el6 = document.getElementById("dog6");
+            var el7 = document.getElementById("dog7");
+            var el8 = document.getElementById("dog8");
+
+            el2.style="display:none;";
+            el.style="display:block;";
+            el3.style="display:none;";
+            el4.style="display:none;";
+            el5.style="display:none;";
+            el6.style="display:none;";
+            el7.style="display:none;";
+            el8.style="display:none;";
+            //fadeIn(el);
+        }
+        window.myFunction3 = function () {
+            var el  = document.getElementById("dog2");
+            var el2 = document.getElementById("dog3");
+            var el3 = document.getElementById("dog1");
+            var el4 = document.getElementById("dog4");
+            var el5 = document.getElementById("dog5");
+            var el6 = document.getElementById("dog6");
+            var el7 = document.getElementById("dog7");
+            var el8 = document.getElementById("dog8");
+
+            el2.style="display:block;";
+            el.style="display:none;";
+            el3.style="display:none;";
+            el4.style="display:none;";
+            el5.style="display:none;";
+            el6.style="display:none;";
+            el7.style="display:none;";
+            el8.style="display:none;";
+            //fadeIn(el);
+        }
+    window.myFunction4 = function () {
+            var el  = document.getElementById("dog2");
+            var el2 = document.getElementById("dog3");
+            var el3 = document.getElementById("dog1");
+            var el4 = document.getElementById("dog4");
+            var el5 = document.getElementById("dog5");
+            var el6 = document.getElementById("dog6");
+            var el7 = document.getElementById("dog7");
+            var el8 = document.getElementById("dog8");
+
+            el2.style="display:none;";
+            el.style="display:none;";
+            el3.style="display:none;";
+            el4.style="display:block;";
+            el5.style="display:none;";
+            el6.style="display:none;";
+            el7.style="display:none;";
+            el8.style="display:none;";
+            //fadeIn(el);
+    }
+    window.myFunction5 = function () {
+            var el  = document.getElementById("dog1");
+            var el2 = document.getElementById("dog2");
+            var el3 = document.getElementById("dog3");
+            var el4 = document.getElementById("dog4");
+            var el5 = document.getElementById("dog5");
+            var el6 = document.getElementById("dog6");
+            var el7 = document.getElementById("dog7");
+            var el8 = document.getElementById("dog8");
+
+            el2.style="display:none;";
+            el.style="display:none;";
+            el3.style="display:none;";
+            el4.style="display:none;";
+            el5.style="display:block;";
+            el6.style="display:none;";
+            el7.style="display:none;";
+            el8.style="display:none;";
+    } 
+    window.myFunction6 = function () {
+            var el  = document.getElementById("dog1");
+            var el2 = document.getElementById("dog2");
+            var el3 = document.getElementById("dog3");
+            var el4 = document.getElementById("dog4");
+            var el5 = document.getElementById("dog5");
+            var el6 = document.getElementById("dog6");
+            var el7 = document.getElementById("dog7");
+            var el8 = document.getElementById("dog8");
+
+            el2.style="display:none;";
+            el.style="display:none;";
+            el3.style="display:none;";
+            el4.style="display:none;";
+            el5.style="display:none;";
+            el6.style="display:block;";
+            el7.style="display:none;";
+            el8.style="display:none;";
+    } 
+    window.myFunction7 = function () {
+            var el  = document.getElementById("dog1");
+            var el2 = document.getElementById("dog2");
+            var el3 = document.getElementById("dog3");
+            var el4 = document.getElementById("dog4");
+            var el5 = document.getElementById("dog5");
+            var el6 = document.getElementById("dog6");
+            var el7 = document.getElementById("dog7");
+            var el8 = document.getElementById("dog8");
+
+            el2.style="display:none;";
+            el.style="display:none;";
+            el3.style="display:none;";
+            el4.style="display:none;";
+            el5.style="display:none;";
+            el6.style="display:none;";
+            el7.style="display:block;";
+            el8.style="display:none;";
+    }
+    window.myFunction8 = function () {
+            var el  = document.getElementById("dog1");
+            var el2 = document.getElementById("dog2");
+            var el3 = document.getElementById("dog3");
+            var el4 = document.getElementById("dog4");
+            var el5 = document.getElementById("dog5");
+            var el6 = document.getElementById("dog6");
+            var el7 = document.getElementById("dog7");
+            var el8 = document.getElementById("dog8");
+            
+            el2.style="display:none;";
+            el.style="display:none;";
+            el3.style="display:none;";
+            el4.style="display:none;";
+            el5.style="display:none;";
+            el6.style="display:none;";
+            el7.style="display:none;";
+            el8.style="display:block;";
+    } 
+} 
+    </script>
+
+    <style>
+        body{
+            height: 1000px;
+            background-color: #3c3c3c;
+        }
+        header {
+            text-align: center;
+            color: #f1f1f1;
+        }
+        img{
+            margin-left: 260px;
+            margin-top: 30px;
+       }
+       .sidenav {
+            height: 100%;
+            width: 270px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color:#011a22;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 19px;
+            color: #d7dae2;
+            display: block;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 160px; 
+            font-size: 28px; 
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 300px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+        button {
+            margin-left: 150px;
+            border-radius: 12px;
+        }
+        header{
+            background-color:#011a22;
+            padding: 14px 16px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        #centralizar{
+            position:absolute; 
+            top: 500px;
+            left: 1050px;;
+            transform: translate(-50%, -50%);
+        }
+        #centralizar2{
+            position:absolute; 
+            top: 500px;
+            left: 1100px;;
+            transform: translate(-50%, -50%);
+    
+    }
+    </style>
+    
+        
+
+
+</body>
+</html>
